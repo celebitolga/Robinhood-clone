@@ -1,0 +1,49 @@
+.StatsRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 1.5em;
+  cursor: pointer;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  &:hover {
+    background-color: #31363A;
+  }
+
+  &-intro {
+    text-align: center;
+    h1 {
+      font-size: 1em;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+
+  &-chart {
+    flex: 1;
+    max-width: 130px;
+    margin: 0px 10px;
+  }
+
+  &-numbers {
+    font-size: .75em;
+    font-weight: 500;
+
+    &-price {
+
+    }
+
+    &-percentage {
+
+      &-green {
+        color: #5AC53B;
+      }
+
+      &-red {
+        color: red;
+      }
+    }
+  }
+}

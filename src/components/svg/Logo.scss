@@ -1,0 +1,9 @@
+.Logo {
+  cursor: pointer;
+
+  &:hover {
+    svg {
+      fill: #5AC53B;
+    }
+  }
+}

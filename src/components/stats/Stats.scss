@@ -1,0 +1,41 @@
+.Stats {
+  flex: .3;
+  padding: 0px 30px 30px;
+
+  &-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #1E2023;
+    border-radius: 5px;
+    border: 1px solid #42494D;
+  }
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1em;
+    border-bottom: 1px solid #42494D;
+    padding: 20px 20px;
+    font-weight: 500;
+  }
+
+  &-content {
+
+    &-rows {
+
+    }
+  }
+
+  &-lists {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1em;
+    border-bottom: 1px solid #42494D;
+    border-top: 1px solid #42494D;
+    padding: 20px 20px;
+    font-weight: 500;
+  }
+}
