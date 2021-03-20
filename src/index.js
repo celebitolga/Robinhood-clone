@@ -2,14 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './App';
+import store from "./app/store";
+import { Provider } from "react-redux";
 import reportWebVitals from './reportWebVitals';
 import { Container } from '@material-ui/core';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Container>
-      <App />
-    </Container>
+    <Provider store={store}>
+      <Container>
+        <App />
+      </Container>
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );

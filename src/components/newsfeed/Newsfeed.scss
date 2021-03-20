@@ -14,4 +14,65 @@
       }
     }
   }
+
+  &-buying {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #3b4754;
+    padding: 20px 0px;
+  }
+  
+  &-market {
+    margin-top: 60px;
+
+    &-box {
+      height: 10vh;
+      padding: 20px;
+      border: 1px solid #31363A;
+      border-radius: 4px;
+
+      p {
+        color: #7B858A;
+        font-size: .975em;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  &-popularList {
+    margin-top: 60px;
+
+    &-intro {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+
+    &-badges {
+
+      .topicBadge {
+        margin-bottom: 10px;
+        background-color: #185c05;
+
+        &:focus {
+          background-color: #5AC53B;
+        }
+        &:hover {
+          background-color: #5AC53B;
+        }
+      }
+    
+      .topicBadge:nth-child(1) {
+        margin-right: 10px;
+      }
+
+      .topicBadge + .topicBadge {
+        margin-right: 10px;
+      }
+    }
+  }
 }

@@ -1,8 +1,13 @@
 import React from 'react';
 import Stock from '../svg/Stock';
 import "./StatsRow.scss";
+import { addSharesToDBAsync, sellSharesToDBAsync } from './../../features/stocks/stocksSlice';
+import { useDispatch } from 'react-redux';
+
+
 
 function StatsRow({ name, openPrice, price, shares }) {
+  const dispatch = useDispatch()
 
   const getSvgColor = () => {
     let percentage = (price / openPrice) * 100 - 100;
@@ -40,11 +45,21 @@ function StatsRow({ name, openPrice, price, shares }) {
     }
   }
 
+  const handleClick = () => {
+    if (shares) {
+      // * SELL
+      dispatch(sellSharesToDBAsync(name));
+    } else {
+      // * BUY
+      dispatch(addSharesToDBAsync(name));
+    }
+  };
+
   return (
-    <div className="StatsRow">
+    <div onClick={handleClick} className="StatsRow">
       <div className="StatsRow-intro">
         <h1>{name && name}</h1>
-        <p>{shares && shares}</p>
+        <p>{shares && shares + " shares"}</p>
       </div>
       <div className="StatsRow-chart">
         <Stock fill={getSvgColor()} />
